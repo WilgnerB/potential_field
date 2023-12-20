@@ -1,0 +1,14 @@
+<launch>
+  <param name="~a" type="double" value="4.0" />
+  <param name="~kp" type="double" value="25.0" />
+  <param name="~kp1" type="double" value="2.00" />
+  <param name="~kp2" type="double" value="2.00" />
+  <param name="~k_att" type="double" value="0.5" />
+  <param name="~k_rep" type="double" value="0.1" />
+  <param name="~x_goal" type="double" value="5.00" />
+  <param name="~y_goal" type="double" value="5.00" />
+  <param name="~D_MAX" type="double" value="2.00" />
+  <param name="~d" type="double" value="0.1" />
+  <node pkg="stage_ros" type="stageros" name="stageros" args="$(find potential_field)/ecai21_1.world" />
+  <node pkg="potential_field" type="potential_field_node" name="potential_field_node" output="screen"/>
+</launch>
